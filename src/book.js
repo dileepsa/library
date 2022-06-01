@@ -1,8 +1,11 @@
 class Book {
+  #name;
+  #author;
+  #genre;
   constructor(name, author, genre) {
-    this.name = name;
-    this.author = author;
-    this.genre = genre;
+    this.#name = name;
+    this.#author = author;
+    this.#genre = genre;
   }
 
   belongsTo(genre) {
@@ -11,9 +14,9 @@ class Book {
 
   equals(otherBook) {
     return otherBook instanceof Book &&
-      this.name === otherBook.name &&
-      this.author === otherBook.author &&
-      this.genre === otherBook.genre;
+      this.#name === otherBook.#name &&
+      this.#author === otherBook.#author &&
+      this.#genre === otherBook.#genre;
   }
 }
 

@@ -2,7 +2,7 @@ const assert = require('assert');
 const { Catalog } = require('../src/catalog.js');
 const { Book } = require('../src/book.js');
 
-describe.only('Catalog', () => {
+describe('Catalog', () => {
   it('Should validate books of same class', () => {
     const wingsOfFire = new Book('wings of fire', 'APJ Kalam', 'autobiography');
     const catalog1 = new Catalog([wingsOfFire]);
