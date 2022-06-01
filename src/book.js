@@ -9,7 +9,7 @@ class Book {
   }
 
   belongsTo(genre) {
-    return this.genre === genre;
+    return this.#genre === genre;
   }
 
   equals(otherBook) {

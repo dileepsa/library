@@ -15,4 +15,14 @@ describe('Catalog', () => {
     const catalog1 = new Catalog([wingsOfFire]);
     assert.ok(!catalog1.equals([{ name: 'wings of fire' }]));
   });
+
+  describe('booksOf', () => {
+    it('Should return one book of autobiography', () => {
+      const wingsOfFire = new Book('wings of fire', 'APJ Kalam', 'autobiography');
+      const catalog = new Catalog([wingsOfFire]);
+      const expected = [{ name: 'wings of fire', author: 'APJ Kalam', genre: 'autobiography' }];
+      const actual = catalog.booksOf('autobiography');
+      assert.strict(actual, expected);
+    });
+  });
 });
